@@ -6,7 +6,7 @@ class Solution {
             int left =i+1;
             int right =nums.length-1;
             while(left<right){
-                int curr =nums[i]+nums[left]+nums[right];
+                int curr =nums[i] + nums[left] + nums[right];
                 if(Math.abs(curr-target)<Math.abs(closestSum-target)){
                     closestSum =curr;
                 }
