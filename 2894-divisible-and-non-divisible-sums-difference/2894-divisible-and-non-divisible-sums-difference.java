@@ -15,7 +15,7 @@ class Solution {
         int total = n*(n+1)/2;
         int k=n/m;
         int mult =m*k*(k+1)/2;
-        return total -2*mult;
+        return total -mult-mult;
 
     }
 }
