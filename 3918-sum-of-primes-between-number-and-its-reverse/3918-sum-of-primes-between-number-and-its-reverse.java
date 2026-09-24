@@ -6,19 +6,23 @@ class Solution {
              rev=rev*10+temp;
              f=f/10;
          }
-         if(n>rev){
-            int temp=n;
-            n=rev;
-            rev=temp;  
-         }
+         if(n<rev){
          for(int i=n;i<=rev;i++){
             if(isprime(i)){
                 sum+=i;
             }
          }
-         return sum;
+         }
+         else{
+             for(int i=rev;i<=n;i++){
+            if(isprime(i)){
+                sum+=i;
+            }
+         }
     }
-    static boolean isprime(int n){
+      return sum;
+    }
+    boolean isprime(int n){
         if(n<2){
             return false;
         }
