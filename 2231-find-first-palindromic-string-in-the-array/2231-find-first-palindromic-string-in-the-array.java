@@ -15,10 +15,15 @@ public class Solution {
          return "";
     }
         static boolean pal(String s){
-            StringBuilder b= new StringBuilder();
-            for(int i=s.length()-1;i>=0;i--){
-                b.append(s.charAt(i));
+           int i=0,j=s.length()-1;
+           while(i<j){
+            if(s.charAt(i)!=s.charAt(j)){
+                return false;
             }
-            return s.equals(b.toString());
+            i++;
+            j--;
+           }
+           
+           return true;
         }
     }
