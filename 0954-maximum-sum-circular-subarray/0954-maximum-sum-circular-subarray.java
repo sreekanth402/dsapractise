@@ -12,6 +12,9 @@ class Solution {
             minsum=Math.min(minsum,currmin);
             totalsum+=ele;
         }
-        return maxsum>0?Math.max(maxsum,totalsum - minsum):maxsum;
+        if(maxsum<0){
+            return maxsum;
+        }
+        return Math.max(maxsum,totalsum - minsum);
     }
 }
